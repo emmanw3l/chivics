@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Car {
+  id           String     @id @default(cuid())
+  make         String
+  model        String
+  year         Int
+  price        Decimal
+  description  String
+  mileage      Int?
+  transmission String?
+  fuelType     String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  images       CarImage[]
+
+  @@index([createdAt])
+}
+
+model CarImage {
+  id          String @id @default(cuid())
+  url         String // Firebase Storage download URL
+  storagePath String // Firebase Storage path, needed for deletion
+  order       Int    @default(0) // controls carousel sequence
+  carId       String
+  car         Car    @relation(fields: [carId], references: [id], onDelete: Cascade)
+
+  @@index([carId])
+}
