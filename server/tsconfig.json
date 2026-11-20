@@ -12,7 +12,7 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src", "../client/src/lib/cloudinaryUpload.ts",
+    "src",
     
   ]
 }
