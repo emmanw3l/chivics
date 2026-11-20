@@ -8,7 +8,7 @@ import { Hero } from "../components/Hero";
 import { Navbar } from "../components/Navbar";
 import { api } from "../lib/api";
 import type { Car } from "../types/car";
-import { LocationSection } from "../components/locationSection";
+import { LocationSection } from "../components/LocationSection";
 
 export function Home() {
   const [cars, setCars] = useState<Car[]>([]);
