@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import AdminHeader from "./adminHeader";
+import AdminHeader from "./AdminHeader";
 import { api } from "../../lib/api";
 import { uploadCarImage } from "../../lib/cloudinaryUpload";
 import type { Car, CarImage } from "../../types/car";

@@ -2,7 +2,7 @@ import { signOut } from "firebase/auth";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import AdminHeader from "./adminHeader";
+import AdminHeader from "./AdminHeader";
 import { api } from "../../lib/api";
 import { formatPrice } from "../../lib/format";
 import { auth } from "../../lib/firebase";
